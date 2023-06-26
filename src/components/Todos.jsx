@@ -27,9 +27,9 @@ function Todos(props) {
             {
                 todos && todos.map((todo, i) =>{
                     return <div style={{backgroundColor:"red"}} key={i}>
-                        <h2>{todo.taskname}</h2>
-                        <h3>{todo.status}</h3>
-                        <p>{todo.tag}</p>
+                        <h2>taskname: {todo.taskname}</h2>
+                        <h3>status: {todo.status}</h3>
+                        <p>tag: {todo.tag}</p>
                     </div>
                 })
             }
