@@ -3,6 +3,7 @@ import { useState } from 'react';
 import {useNavigate} from "react-router-dom"
 
 function Login(props) {
+    const BASE_URL = "https://calm-moccasins-goat.cyclic.app"
     const naviagte = useNavigate()
     const [users, setUsers] = useState({
         email:"",
@@ -15,7 +16,7 @@ function Login(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch("http://localhost:8080/login", {
+        fetch(`${BASE_URL}/login`, {
             method: "POST",
             headers:{
                 "Content-type": "application/json"

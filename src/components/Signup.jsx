@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 function Signup(props) {
+    const BASE_URL = "https://calm-moccasins-goat.cyclic.app"
     const [users, setUsers] = useState({
         ipAddress:"",
         email:"",
@@ -14,7 +15,7 @@ function Signup(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch("http://localhost:8080/signup", {
+        fetch(`${BASE_URL}/signup`, {
             method: "POST",
             headers:{
                 "Content-type": "application/json"
